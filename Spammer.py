@@ -23,7 +23,7 @@ class spammer():
                                -- CuckNo --
     """
 
-       def spam(self):
+   def spam(self):
         # Credentials
         username = raw_input("[?] enter your gmail: ")
         password = raw_input("[?] enter your password: ")
