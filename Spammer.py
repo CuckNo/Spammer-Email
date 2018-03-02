@@ -56,7 +56,7 @@ class spammer():
                 msg = "From: ANONYMOUS\nTo: %s\nSubject: %s\nDate: %s\n\n%s" % (target, subj, date, content)
 
                 server.sendmail(username, target, msg)
-		timeout(10,Time)
+		timeout(Time)
         except smtplib.SMTPException:
         		print "[-] An Error Occured During Process"
         		print "[!] The target email might be wrong"
